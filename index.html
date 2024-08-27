@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Minified Performance</title>
+
+     <!-- Preload critical resources -->
+     <link rel="preload" href="css/styles.min.css" as="style">
+     <link rel="preload" href="images/1.jpg" as="image">
+
     <!-- Link to minified CSS -->
-    <link href="css/styles.min.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet" media="all">
 </head>
 <body>
     <div class="container mt-5">
         <h1 class="display-4">Minified Performance</h1>
         <p>This page uses minification, which reduces the size of CSS, JavaScript, and HTML files by removing unnecessary characters, comments, and whitespace.</p>
         <div class="media-container">
+            <!-- images -->
             <img src="images/1.jpg" alt="Minified Image 1" class="img-fluid">
             <img src="images/2.jpg" alt="Minified Image 2" class="img-fluid">
             <img src="images/3.jpg" alt="Minified Image 3" class="img-fluid">
@@ -21,6 +27,8 @@
             <img src="images/7.jpg" alt="Minified Image 7" class="img-fluid">
             <img src="images/8.jpg" alt="Minified Image 8" class="img-fluid">
             <img src="images/9.jpg" alt="Minified Image 9" class="img-fluid">
+
+            <!--videos-->
             <video controls class="img-fluid">
                 <source src="videos/1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -63,7 +71,7 @@
             <p>Page Size: <span id="page-size"></span> KB</p>
         </div>
         <!-- Minified JavaScript -->
-        <script src="js/script.min.js"></script>
+        <script src="js/script.min.js" defer></script>
     </div>
 </body>
 </html>
