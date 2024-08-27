@@ -1,13 +1,16 @@
 {
-  "name": "combined-project",
+  "name": "minified-performance",
   "version": "1.0.0",
-  "description": "A project to combine lazy loading and minification",
+  "description": "A website demonstrating the impact of minification on performance.",
+  "main": "index.js",
   "scripts": {
-    "minify": "uglifyjs js/script.js -o js/script.min.js && cleancss -o css/styles.min.css css/styles.css && html-minifier-terser --input-dir . --output-dir . --collapse-whitespace --remove-comments --minify-css true --minify-js true --file-ext html"
+    "minify-js": "uglifyjs js/script.js -o js/script.min.js",
+    "minify-css": "cleancss -o css/styles.min.css css/styles.css",
+    "minify-html": "html-minifier-terser --input-dir . --output-dir dist --collapse-whitespace --remove-comments --minify-css true --minify-js true"
   },
   "devDependencies": {
-    "uglify-js": "^3.14.3",
-    "clean-css-cli": "^5.3.2",
-    "html-minifier-terser": "^7.0.0"
+    "clean-css-cli": "^5.6.3",
+    "html-minifier-terser": "^6.1.0",
+    "uglify-js": "^3.19.2"
   }
 }
