@@ -1,5 +1,19 @@
-document.addEventListener("DOMContentLoaded",function(){window
-    .addEventListener("load",function(){const e=performance.timing.loadEventEnd-performance.timing.navigationStart;document
-        .getElementById("load-time").textContent=e});const e=performance.getEntriesByType("resource");let t=0;e
-        .forEach(e=>{e.transferSize&&(t+=e.transferSize)});const n=(t/1024).toFixed(2);document
-        .getElementById("page-size").textContent=n});
+document.addEventListener("DOMContentLoaded", function() {
+    var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+    if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.classList.remove("lazy");
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+        });
+
+        lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+        });
+    }
+});

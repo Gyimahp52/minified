@@ -7,8 +7,7 @@
 
      <!-- Preload critical resources -->
      <link rel="preload" href="css/styles.min.css" as="style">
-     <link rel="preload" href="images/1.jpg" as="image">
-
+     
     <!-- Link to minified CSS -->
     <link href="css/styles.min.css" rel="stylesheet" media="all">
 </head>
@@ -18,15 +17,54 @@
         <p>This page uses minification, which reduces the size of CSS, JavaScript, and HTML files by removing unnecessary characters, comments, and whitespace.</p>
         <div class="media-container">
             <!-- images -->
-            <img src="images/1.jpg" alt="Minified Image 1" class="img-fluid">
-            <img src="images/2.jpg" alt="Minified Image 2" class="img-fluid">
-            <img src="images/3.jpg" alt="Minified Image 3" class="img-fluid">
-            <img src="images/4.jpg" alt="Minified Image 4" class="img-fluid">
-            <img src="images/5.jpg" alt="Minified Image 5" class="img-fluid">
-            <img src="images/6.jpg" alt="Minified Image 6" class="img-fluid">
-            <img src="images/7.jpg" alt="Minified Image 7" class="img-fluid">
-            <img src="images/8.jpg" alt="Minified Image 8" class="img-fluid">
-            <img src="images/9.jpg" alt="Minified Image 9" class="img-fluid">
+            <picture>
+                <source srcset="images/1.webp" type="image/webp">
+                <img src="images/1.jpg" alt="Optimized Image 1" class="img-fluid lazy">
+            </picture>
+
+            <picture>
+                <source srcset="images/2.webp" type="image/webp">
+                <img src="images/2.jpg" alt="Optimized Image 2" class="img-fluid lazy">
+            </picture>
+
+            <picture>
+                <source srcset="images/3.webp" type="image/webp">
+                <img src="images/3.jpg" alt="Optimized Image 3" class="img-fluid lazy">
+            </picture>
+            <picture>
+                <source srcset="images/4.webp" type="image/webp">
+                <img src="images/4.jpg" alt="Optimized Image 1" class="img-fluid lazy">
+            </picture>
+
+            <picture>
+                <source srcset="images/5.webp" type="image/webp">
+                <img src="images/5.jpg" alt="Optimized Image 1" class="img-fluid lazy">
+            </picture>
+            <picture>
+                <source srcset="images/6.webp" type="image/webp">
+                <img src="images/6.jpg" alt="Optimized Image 1" class="img-fluid lazy">
+            </picture>
+
+            <picture>
+                <source srcset="images/7.webp" type="image/webp">
+                <img src="images/7.jpg" alt="Optimized Image 1" class="img-fluid lazy">
+            </picture>
+
+            <picture>
+                <source srcset="images/7.webp" type="image/webp">
+                <img src="images/7.jpg" alt="Optimized Image 1" class="img-fluid lazy">
+            </picture>
+
+            <picture>
+                <source srcset="images/8.webp" type="image/webp">
+                <img src="images/8.jpg" alt="Optimized Image 1" class="img-fluid lazy">
+            </picture>
+
+            <picture>
+                <source srcset="images/9.webp" type="image/webp">
+                <img src="images/9.jpg" alt="Optimized Image 9" class="img-fluid lazy">
+            </picture>
+           
 
             <!--videos-->
             <video controls class="img-fluid">
