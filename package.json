@@ -1,15 +1,15 @@
 {
   "name": "minification-project",
   "version": "1.0.0",
-  "description": "Project demonstrating the impact of minification on performance.",
   "scripts": {
-    "minify-js": "uglifyjs js/script.js -o js/script.min.js",
-    "minify-css": "cleancss -o css/styles.min.css css/styles.css",
-    "minify-html": "html-minifier-terser --input-dir . --output-dir dist --collapse-whitespace --remove-comments --minify-css true --minify-js true"
+    "minify-css": "cleancss -o dist/css/styles.min.css src/css/styles.css",
+    "minify-js": "terser src/js/script.js -o dist/js/script.min.js",
+    "minify-html": "html-minifier-terser --input-dir src --output-dir dist --collapse-whitespace --remove-comments --minify-css true --minify-js true",
+    "build": "npm run minify-css && npm run minify-js && npm run minify-html"
   },
   "devDependencies": {
-    "uglify-js": "^3.14.4",
-    "clean-css-cli": "^5.3.2",
-    "html-minifier-terser": "^6.0.0"
+    "clean-css-cli": "^5.3.0",
+    "html-minifier-terser": "^7.0.0",
+    "terser": "^5.10.0"
   }
 }
