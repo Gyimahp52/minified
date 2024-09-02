@@ -1,15 +1,17 @@
 {
-  "name": "minification-project",
+  "name": "minification-website",
   "version": "1.0.0",
+  "description": "A website that uses minification to optimize performance.",
+  "main": "index.js",
   "scripts": {
-    "minify-css": "cleancss -o dist/css/styles.min.css src/css/styles.css",
-    "minify-js": "terser src/js/script.js -o dist/js/script.min.js",
-    "minify-html": "html-minifier-terser --input-dir src --output-dir dist --collapse-whitespace --remove-comments --minify-css true --minify-js true",
-    "build": "npm run minify-css && npm run minify-js && npm run minify-html"
+    "minify-html": "html-minifier-terser --input-dir src --output-dir public --collapse-whitespace --remove-comments --minify-js true --minify-css true",
+    "minify-css": "cleancss -o public/css/styles.min.css src/css/styles.css",
+    "minify-js": "uglifyjs src/js/script.js -o public/js/script.min.js",
+    "build": "npm run minify-html && npm run minify-css && npm run minify-js"
   },
   "devDependencies": {
-    "clean-css-cli": "^5.3.0",
-    "html-minifier-terser": "^7.0.0",
-    "terser": "^5.10.0"
+    "html-minifier-terser": "^6.1.0",
+    "uglify-js": "^3.14.5",
+    "clean-css-cli": "^5.3.2"
   }
 }
