@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "src": "public/**/*",
+      "src": "package.json",
       "use": "@vercel/static-build"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/public/index.html"
     }
   ]
 }
