@@ -25,5 +25,5 @@ body {
     max-width: 600px;
     border-radius: 8px;
     transition: opacity 0.3s ease-in-out;
-    opacity: 1;
+    opacity: 0;
 }
