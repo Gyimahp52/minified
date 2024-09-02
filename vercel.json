@@ -1,14 +1,13 @@
 {
-  "builds": [
+  "headers": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/public/index.html"
+      "source": "/(.*).(js|css|jpg|jpeg|png|gif|svg|webp)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=31536000, public"
+        }
+      ]
     }
   ]
 }
