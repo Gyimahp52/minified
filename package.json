@@ -1,7 +1,6 @@
 {
   "name": "minified-site",
   "version": "1.0.0",
-  "description": "A site with minified assets",
   "scripts": {
     "build": "echo 'No build step necessary'",
     "start": "live-server public/"
