@@ -6,9 +6,7 @@
         {
           "key": "Cache-Control",
           "value": "max-age=31536000, public",
-          "compression": "brotli",
-          "Cache-Control": "max-age=31536000, public"
-
+          "compression": "brotli"
         }
       ]
     }
